@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorteo de Color</title>
+  <style>
+    body {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      color: white;
+      font-size: 40px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<script>
+  const colores = [
+    { nombre: "Rojo", color: "#e74c3c" },
+    { nombre: "Azul", color: "#3498db" },
+    { nombre: "Verde", color: "#2ecc71" },
+    { nombre: "Amarillo", color: "#f1c40f" },
+    { nombre: "Morado", color: "#9b59b6" },
+    { nombre: "Naranja", color: "#e67e22" },
+    { nombre: "Rosa", color: "#fd79a8" },
+    { nombre: "Negro", color: "#2d3436" }
+  ];
+
+  const elegido = colores[Math.floor(Math.random() * colores.length)];
+
+  document.body.style.backgroundColor = elegido.color;
+  document.body.innerHTML = <div>🎉 Tu color es:<br><strong>${elegido.nombre}</strong></div>;
+</script>
+
+</body>
+</html>
